@@ -6,7 +6,10 @@
   src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap") format("woff2");
   }
   
-  body {
-  background-color: #FAF6F0; 
+  * {
+   
   font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #FAF6F0; 
 }

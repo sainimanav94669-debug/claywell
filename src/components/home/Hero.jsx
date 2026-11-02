@@ -38,7 +38,7 @@ const Hero = () => {
 
                 </div>
                 <div>
-                    <img width="616" height="560" src="public/images/webp/img-hero.webp" alt="hero-img" className='xl:min-w-[616px]  md:min-w-[300px] ' />
+                    <img width="616" height="560" src="/images/webp/img-hero.webp" alt="hero-img" className='xl:min-w-[616px]  md:min-w-[300px] ' />
                 </div>
             </div>
         </section>
