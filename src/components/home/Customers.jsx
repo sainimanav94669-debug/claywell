@@ -32,7 +32,7 @@ const Customers = () => {
     <section className="w-full bg-[#FAF6F1] px-4 sm:px-10 lg:px-20.25 py-15 sm:py-20 lg:py-24 max-w-360 mx-auto">
       <div className="mx-auto  ">
 
-        
+
         <div className="sm:mb-10 text-center mb-8 lg:mb-14">
           <Info className="mb-2 text-10 font-medium uppercase tracking-[2px] text-orange-100">
             Loved by customers
@@ -43,17 +43,17 @@ const Customers = () => {
           </Heading>
         </div>
 
-        
+
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {CUSTOMER_DATA.map((customer) => (
             <article
               key={customer.name}
               className="group flex h-full flex-col rounded-[20px] border border-light-cream bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-100 hover:shadow-lg sm:py-8 sm:pr-7.5 sm:pl-8"
             >
-              
+
               <div
                 className="mb-5 "
-               >
+              >
                 <svg width="106" height="18" viewBox="0 0 106 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_5_52)">
                     <path d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z" fill="#E0A030" />
@@ -71,12 +71,12 @@ const Customers = () => {
 
               </div>
 
-             
+
               <p className="mb-5 grow text-sm leading-5 text-light-gray-300 sm:text-base sm:leading-163 font-normal">
                 {customer.message}
               </p>
 
-               
+
               <div className="mt-auto flex items-center gap-3">
                 <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-medium text-white transition-transform duration-300 group-hover:scale-110">
                   {customer.tag}

@@ -10,10 +10,10 @@ import {
 const CART_KEY = "claywell-cart-v2";
 const COUPON_KEY = "claywell-coupon";
 
- export const FREE_SHIPPING_MIN = 1999;  
-export const SHIPPING_FEE = 99;  
+export const FREE_SHIPPING_MIN = 1999;
+export const SHIPPING_FEE = 99;
 const COUPONS = {
-  
+
   CLAY30: {
     percent: 30,
     category: "dinner-sets",
@@ -45,29 +45,29 @@ export function CartProvider({ children }) {
     try {
       localStorage.setItem(CART_KEY, JSON.stringify(items));
       localStorage.setItem(COUPON_KEY, JSON.stringify(couponCode));
-    } catch {}
+    } catch { }
   }, [items, couponCode]);
 
   const openCart = useCallback(() => setIsOpen(true), []);
   const closeCart = useCallback(() => setIsOpen(false), []);
 
-   const addItem = useCallback((product, { open = false } = {}) => {
-  setItems((list) => {
-    const found = list.find((i) => i.id === product.id);
+  const addItem = useCallback((product, { open = false } = {}) => {
+    setItems((list) => {
+      const found = list.find((i) => i.id === product.id);
 
-    if (found) {
-      return list.map((i) =>
-        i.id === product.id
-          ? { ...i, qty: i.qty + 1 }
-          : i
-      );
-    }
+      if (found) {
+        return list.map((i) =>
+          i.id === product.id
+            ? { ...i, qty: i.qty + 1 }
+            : i
+        );
+      }
 
-    return [...list, { ...product, qty: 1 }];
-  });
+      return [...list, { ...product, qty: 1 }];
+    });
 
-  if (open) setIsOpen(true);
-}, []);
+    if (open) setIsOpen(true);
+  }, []);
 
   const increase = useCallback(
     (id) =>
@@ -97,7 +97,7 @@ export function CartProvider({ children }) {
 
   const removeCoupon = useCallback(() => setCouponCode(""), []);
 
-   
+
   const totals = useMemo(() => {
     const count = items.reduce((n, i) => n + i.qty, 0);
     const subtotal = items.reduce((n, i) => n + i.price * i.qty, 0);
@@ -105,8 +105,8 @@ export function CartProvider({ children }) {
     const rule = COUPONS[couponCode];
     const eligible = rule
       ? items
-          .filter((i) => i.category === rule.category)
-          .reduce((n, i) => n + i.price * i.qty, 0)
+        .filter((i) => i.category === rule.category)
+        .reduce((n, i) => n + i.price * i.qty, 0)
       : 0;
     const discount = rule ? Math.round((eligible * rule.percent) / 100) : 0;
     const activeCoupon = rule && discount > 0 ? couponCode : "";
@@ -125,7 +125,7 @@ export function CartProvider({ children }) {
     };
   }, [items, couponCode]);
 
-   
+
   const applyCoupon = useCallback(
     (raw) => {
       const code = raw.trim().toUpperCase();

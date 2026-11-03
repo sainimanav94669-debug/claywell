@@ -43,9 +43,9 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
   } = useCart();
 
   const [code, setCode] = useState("");
-  const [note, setNote] = useState(null);  
+  const [note, setNote] = useState(null);
   const closeRef = useRef(null);
- 
+
   useEffect(() => {
     if (!isOpen) return;
     const onKey = (e) => e.key === "Escape" && closeCart();
@@ -70,27 +70,24 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 ${
-        isOpen ? "visible" : "invisible transition-[visibility] delay-300"
-      }`}
+      className={`fixed inset-0 z-50 ${isOpen ? "visible" : "invisible transition-[visibility] delay-300"
+        }`}
     >
-       
+
       <div
         onClick={closeCart}
-        className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0"
+          }`}
       />
 
-       <aside
+      <aside
         role="dialog"
         aria-modal="true"
         aria-label="Shopping cart"
-        className={`absolute right-0 top-0 flex h-full w-full max-w-110 flex-col bg-white shadow-2xl transition-transform duration-300 motion-reduce:transition-none ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`absolute right-0 top-0 flex h-full w-full max-w-110 flex-col bg-white shadow-2xl transition-transform duration-300 motion-reduce:transition-none ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
-         <div className="flex items-center justify-between border-b max-w-110 border-[#eee5dc] px-6 py-6">
+        <div className="flex items-center justify-between border-b max-w-110 border-[#eee5dc] px-6 py-6">
           <h2 className="text-2xl leading-117 font-medium text-dark-warm-charcoal">
             Your cart ({count})
           </h2>
@@ -102,14 +99,14 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
             className="grid h-10 w-10 place-items-center rounded-full bg-light-gray-500 text-dark-warm-charcoal cursor-pointer transition-colors hover:bg-[#eadfd3]"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.5 4.5L9 9M9 9L13.5 13.5M9 9L13.5 4.5M9 9L4.5 13.5" stroke-width="1.5" stroke-linecap="round" stroke="#2B2622"/>
-</svg>
+              <path d="M4.5 4.5L9 9M9 9L13.5 13.5M9 9L13.5 4.5M9 9L4.5 13.5" stroke-width="1.5" stroke-linecap="round" stroke="#2B2622" />
+            </svg>
 
           </button>
         </div>
 
         {empty ? (
-           <div className="flex flex-1 flex-col items-center justify-center px-10 text-center">
+          <div className="flex flex-1 flex-col items-center justify-center px-10 text-center">
             <div className="mb-4 grid h-24 w-24 place-items-center rounded-full bg-[#F6F0E8] text-orange-100">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <circle cx="9" cy="21" r="1" />
@@ -134,7 +131,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
           </div>
         ) : (
           <>
-             <ul className="flex-1 overflow-y-auto">
+            <ul className="flex-1 overflow-y-auto">
               {items.map((item) => (
                 <li
                   key={item.id}
@@ -189,8 +186,8 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                       className="  transition-colors hover:text-orange-100 cursor-pointer"
                     >
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 5.25H4.5M4.5 5.25H6.75M4.5 5.25L5.25 15H12.75L13.5 5.25M6.75 5.25H11.25M6.75 5.25V3H11.25V5.25M11.25 5.25H13.5M13.5 5.25H15M7.5 8.25V12.75M10.5 8.25V12.75" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" stroke="#9A8F85"/>
-</svg>
+                        <path d="M3 5.25H4.5M4.5 5.25H6.75M4.5 5.25L5.25 15H12.75L13.5 5.25M6.75 5.25H11.25M6.75 5.25V3H11.25V5.25M11.25 5.25H13.5M13.5 5.25H15M7.5 8.25V12.75M10.5 8.25V12.75" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" stroke="#9A8F85" />
+                      </svg>
 
                     </button>
                     <span className="text-base leading-119 font-bold text-dark-warm-charcoal">
@@ -201,7 +198,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
               ))}
             </ul>
 
-             <div className="border-t border-[#eee5dc] px-6 py-6 ">
+            <div className="border-t border-[#eee5dc] px-6 py-6 ">
               {coupon ? (
                 <div className="flex items-center justify-between rounded-lg bg-[#f7efe7] px-4 py-2.5 text-xs text-dark-warm-charcoal">
                   <span>

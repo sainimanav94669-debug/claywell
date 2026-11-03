@@ -20,20 +20,20 @@ const Hero = () => {
                             <span className="relative z-10 transition-colors duration-300">  View Offers </span>
                         </Button>
                     </div>
-                    <div className='flex items-center justify-between  max-w-92 gap-4'> 
-                         <div>
+                    <div className='flex items-center justify-between  max-w-92 gap-4'>
+                        <div>
                             <h2 className=' text-2xl sm:text-32 font-bold text-dark-warm-charcoal leading-119'>12k+</h2>
-                        <p className='text-warm-gray-200 mt-0.5 text-sm font-normal leading-115'>Happy homes</p>
-                         </div>
-                         <div>
+                            <p className='text-warm-gray-200 mt-0.5 text-sm font-normal leading-115'>Happy homes</p>
+                        </div>
+                        <div>
                             <h2 className='text-2xl sm:text-32 font-bold text-dark-warm-charcoal leading-119'>350+</h2>
-                        <p className='text-warm-gray-200 mt-0.5 text-sm font-normal leading-115'>Unique designs</p>
-                         </div>
-                         <div>
+                            <p className='text-warm-gray-200 mt-0.5 text-sm font-normal leading-115'>Unique designs</p>
+                        </div>
+                        <div>
                             <h2 className='text-2xl sm:text-32 font-bold text-dark-warm-charcoal leading-119'>4.9</h2>
-                        <p className='text-warm-gray-200 mt-0.5 text-sm font-normal leading-115'>Average rating</p>
-                         </div>
-                        
+                            <p className='text-warm-gray-200 mt-0.5 text-sm font-normal leading-115'>Average rating</p>
+                        </div>
+
                     </div>
 
                 </div>

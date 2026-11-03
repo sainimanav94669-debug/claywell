@@ -103,7 +103,7 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Newsletter */}
+           
           <div className="w-full max-w-85 flex flex-col items-start">
             <h3 className="text-sm sm:text-base font-medium leading-118 text-soft-cream mb-3.5">
               Join our newsletter

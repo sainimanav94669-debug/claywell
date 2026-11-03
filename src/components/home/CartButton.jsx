@@ -1,6 +1,6 @@
 import { useCart } from "../../context/CartContext";
 
- export default function CartButton() {
+export default function CartButton() {
   const { count, openCart } = useCart();
 
   return (
