@@ -113,7 +113,7 @@ const Delivered = () => {
               </h3>
 
 
-              <p className="max-w-xs text-sm leading-5 text-dark-brown-900 sm:text-15 sm:leading-172">
+              <p className="max-w-xs text-sm leading-5 text-dark-brown-900 sm:text-15 sm:leading-160">
                 {item.description}
               </p>
             </div>
