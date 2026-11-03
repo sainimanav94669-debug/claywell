@@ -48,7 +48,7 @@ const Customers = () => {
           {CUSTOMER_DATA.map((customer) => (
             <article
               key={customer.name}
-              className="group flex h-full flex-col rounded-20 border border-light-cream bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-100 hover:shadow-lg sm:py-8 sm:pr-7.5 sm:pl-8"
+              className="group flex h-full flex-col rounded-[20px] border border-light-cream bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-100 hover:shadow-lg sm:py-8 sm:pr-7.5 sm:pl-8"
             >
               {/* Star Rating */}
               <div

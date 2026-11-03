@@ -58,10 +58,10 @@ const FeaturedProducts = () => {
   const { addItem } = useCart(); // adds to cart and opens the cart popup
 
   return (
-    <section className="w-full pb-15 sm:pb-20 lg:pb-24 sm:px-10 lg:px-20">
+    <section className="w-full pb-15 sm:pb-20 lg:pb-24 px-4 sm:px-10 lg:px-20">
       <div className="mx-auto">
         {/* Heading */}
-        <div className="mb-12 flex items-end px-4 justify-between gap-4">
+        <div className="mb-12 flex items-end   justify-between gap-4">
           <div>
             <Info className="mb-2 text-10 font-semibold uppercase tracking-[2px] text-orange-100">
               Bestsellers
@@ -95,7 +95,7 @@ const FeaturedProducts = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-auto w-full object-cover rounded-[14px] transition-transform duration-500 group-hover:scale-105 sm:h-67.5"
+                  className="h-auto max-h-75 sm:max-h-auto w-full object-cover rounded-[14px] transition-transform duration-500 group-hover:scale-105 sm:h-67.5"
                 />
 
                 {product.badge && (
@@ -133,7 +133,7 @@ const FeaturedProducts = () => {
                     type="button"
                     onClick={() => addItem(product)}
                     aria-label={`Add ${product.name} to cart`}
-                    className="rounded-full bg-dark-warm-charcoal px-5 leading-4 py-3.5 text-sm font-medium text-white transition-all duration-300 cursor-pointer hover:bg-orange-100 active:scale-95 group relative max-w-44.25 overflow-hidden border-0 ease-out   hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)]   before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
+                    className="rounded-full bg-dark-warm-charcoal px-5 leading-4 py-3.5 text-sm font-medium text-white transition-all duration-300 cursor-pointer hover:bg-orange-100 active:scale-95 group relative max-w-44.25 overflow-hidden border-0 ease-out     hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)]   before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
                   >
                     + Add
                   </button>

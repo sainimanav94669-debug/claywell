@@ -1,6 +1,6 @@
   @import "tailwindcss";
 
- @theme {
+  @theme {
   
   --color-dark-warm-charcoal: #2B2622;
   --color-soft-cream: #FAF6F0;
@@ -46,6 +46,7 @@
   --leading-123: 123%;
   --leading-126: 126%;
   --leading-137: 137%;
+  --leading-160: 160%;
   --leading-163: 163%;
   --leading-172: 172%;
 

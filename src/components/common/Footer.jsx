@@ -122,13 +122,13 @@ const Footer = () => {
                 placeholder="Your email address"
                 aria-label="Your email address"
                 required
-                className="min-w-0 flex-1 bg-transparent outline-none border-none px-3.5 text-xs sm:text-sm font-normal leading-118 text-white placeholder:text-warm-gray-500"
+                className="min-w-0 flex-1 bg-transparent bg-primary! outline-none border-none px-3.5 text-xs sm:text-sm font-normal leading-118 text-white placeholder:text-warm-gray-500"
               />
 
               <button
                 type="submit"
                 disabled={sending}
-                className="shrink-0 bg-orange-100 text-white text-xs sm:text-sm font-normal leading-118 px-3.5 sm:px-5 py-2 sm:py-3 rounded-[20px] transition-all duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
+                className="shrink-0  bg-orange-100 text-white text-xs sm:text-sm font-normal leading-118 px-3.5 sm:px-5 py-2 sm:py-3 rounded-[20px] transition-all duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 group relative max-w-44.25 overflow-hidden border-0  ease-out   hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
               >
                 {sending ? "Sending..." : "Subscribe"}
               </button>

@@ -15,7 +15,7 @@ const Collection = () => {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <img
-            className="h-auto w-full object-cover"
+            className="h-auto w-full max-h-75 sm:max-h-auto rounded-[20px]  object-cover"
             src="/images/webp/img-cat-dinner-sets.webp"
             alt="Dinner Sets"
           />
@@ -29,7 +29,7 @@ const Collection = () => {
 
         <div>
           <img
-            className="h-auto w-full object-cover"
+            className="h-auto max-h-75 sm:max-h-auto rounded-[20px] w-full object-cover"
             src="/images/webp/img-cat-mugs (1).webp"
             alt="Mugs & Cups"
           />
@@ -43,7 +43,7 @@ const Collection = () => {
 
         <div>
           <img
-            className="h-auto w-full object-cover"
+            className="h-auto w-full max-h-75 sm:max-h-auto rounded-[20px]  object-cover"
             src="/images/webp/img-cat-bowls (1).webp"
             alt="Serving Bowls"
           />
@@ -57,7 +57,7 @@ const Collection = () => {
 
         <div>
           <img
-            className="h-auto w-full object-cover"
+            className="h-auto w-full max-h-75 sm:max-h-auto rounded-[20px] object-cover"
             src="/images/webp/img-cat-tea-sets.webp"
             alt="Tea Sets"
           />
