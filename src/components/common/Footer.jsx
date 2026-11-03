@@ -64,9 +64,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-dark-warm-charcoal pt-10 sm:pt-15 lg:pt-18 pb-4 sm:pb-5 md:pb-7 lg:pb-10">
-      <div className="max-w-360 w-full mx-auto px-4 lg:px-20">
+      <div className="max-w-360 w-full mx-auto px-4 sm:px-10 lg:px-20">
         <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-between gap-10 lg:gap-5">
-          {/* Brand */}
+         
           <div className="w-full max-w-95 flex flex-col items-start">
             <a
               href="/"
@@ -89,10 +89,10 @@ const Footer = () => {
 
                 <ul className="flex flex-col gap-3">
                   {section.links.map((link) => (
-                    <li key={link.label} className="leading-118">
+                    <li key={link.label} className="leading-110">
                       <a
                         href={link.href}
-                        className="footer-link hover:text-white text-xs sm:text-15 font-normal leading-118 text-warm-gray-100 transition-colors duration-300"
+                        className="footer-link hover:text-white text-xs sm:text-15 font-normal leading-115 text-warm-gray-100 transition-colors duration-300"
                       >
                         {link.label}
                       </a>

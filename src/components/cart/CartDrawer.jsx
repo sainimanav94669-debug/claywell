@@ -117,7 +117,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
             <p className="text-2xl font-medium leading-117 text-dark-warm-charcoal">
               Your cart is empty
             </p>
-            <p className="mt-4 max-w-80.5 text-15 leading-160 font-normal text-dark-brown-900">
+            <p className="mt-4 max-w-80.5 text-sm sm:text-15 leading-160 font-normal text-dark-brown-900">
               Looks like you have not added any crockery yet. Browse our
               collections to find something you love.
             </p>
@@ -264,7 +264,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                 href={checkoutHref}
                 className="mt-3.5 block rounded-full w-full bg-orange-100 py-4.5 text-center text-base leading-126 font-medium cursor-pointer text-white transition hover:brightness-110 group relative overflow-hidden border-0  duration-300 ease-out  hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
               >
-                Checkout - {inr.format(total)}
+                Checkout · {inr.format(total)}
               </button>
 
               <button

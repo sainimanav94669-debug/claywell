@@ -17,7 +17,7 @@ export default function PromoBanner() {
             Up to 30% off dinner sets
           </Heading>
 
-          <p className="max-w-127.75 font-normal text-17 leading-[165%] text-warm-gray-100">
+          <p className="max-w-127.75 font-normal text-sm sm:text-17 leading-[165%] text-warm-gray-100">
             Refresh your table for the season. Use the code at checkout, valid
             till 15 November.
           </p>

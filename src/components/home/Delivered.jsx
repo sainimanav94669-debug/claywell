@@ -108,7 +108,7 @@ const Delivered = () => {
               </div>
 
 
-              <h3 className="mb-3.5 text-sm font-medium text-dark-warm-charcoal leading-119 sm:text-22">
+              <h3 className="mb-3.5 text-lg font-medium text-dark-warm-charcoal leading-119 sm:text-22">
                 {item.heading}
               </h3>
 
