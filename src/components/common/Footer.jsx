@@ -1,403 +1,159 @@
- import Button from "./Button";
-import Paragraph from "./Paragraph";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
-const companyLinks = [
-  "About",
-  "Features",
-  "Works",
-  "Career",
+// Change the hrefs to your real pages
+export const FOOTER_LINKS = [
+  {
+    title: "Shop",
+    links: [
+      { label: "Dinner Sets", href: "/dinnerware" },
+      { label: "Mugs & Cups", href: "/drinkware" },
+      { label: "Serving Bowls", href: "/shop" },
+      { label: "Tea Sets", href: "/drinkware" },
+    ],
+  },
+  {
+    title: "Help",
+    links: [
+      { label: "Shipping", href: "/" },
+      { label: "Returns", href: "/" },
+      { label: "Care guide", href: "/" },
+      { label: "Contact", href: "/" },
+    ],
+  },
 ];
-
-const helpLinks = [
-  "Customer Support",
-  "Delivery Details",
-  "Terms & Conditions",
-  "Privacy Policy",
-];
-
-const faqLinks = [
-  "Account",
-  "Manage Deliveries",
-  "Orders",
-  "Payments",
-];
-
-const resourcesLinks = [
-  "Free eBooks",
-  "Development Tutorial",
-  "How-to - Blog",
-  "Youtube Playlist",
-];
-
-const FooterColumn = ({ title, links }) => {
-  return (
-    <div>
-      <h3
-        className="
-          text-[9px]
-          font-medium
-          uppercase
-          tracking-[0.18em]
-          text-black
-          sm:text-[10px]
-        "
-      >
-        {title}
-      </h3>
-
-      <div className="mt-3 flex flex-col gap-2">
-        {links.map((link) => (
-          <a
-            href="#"
-            key={link}
-            className="
-              text-[8px]
-              leading-[130%]
-              text-black/50
-              transition-colors
-              hover:text-black
-              sm:text-[9px]
-            "
-          >
-            {link}
-          </a>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const SocialIcon = ({ children, dark = false }) => {
-  return (
-    <a
-      href="#"
-      className={`
-        flex
-        h-5
-        w-5
-        items-center
-        justify-center
-        rounded-full
-        border
-        text-[8px]
-        font-medium
-        transition-all
-        ${
-          dark
-            ? "border-black bg-black text-white"
-            : "border-black/20 bg-white text-black"
-        }
-      `}
-    >
-      {children}
-    </a>
-  );
-};
-
-const PaymentLogo = ({ children }) => {
-  return (
-    <div
-      className="
-        flex
-        h-5
-        min-w-[30px]
-        items-center
-        justify-center
-        rounded-[4px]
-        border
-        border-black/5
-        bg-white
-        px-1
-        text-[6px]
-        font-bold
-        text-black/60
-        sm:h-6
-        sm:min-w-[34px]
-      "
-    >
-      {children}
-    </div>
-  );
-};
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  const form = useRef(null);
+  const [sending, setSending] = useState(false);
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    if (sending) return; // stop double submits
+
+    setSending(true);
+    try {
+      await emailjs.sendForm("service_77m9x8k", "template_efhy5jn", form.current, {
+        publicKey: "wJo3JKkjDqwuvZNbQ",
+      });
+
+      form.current.reset();
+
+      Swal.fire({
+        title: "Thank You!",
+        text: "You have successfully subscribed to our newsletter.",
+        icon: "success",
+        confirmButtonText: "Done",
+        confirmButtonColor: "#C2603A",
+      });
+    } catch (error) {
+      console.error("Email error:", error);
+
+      Swal.fire({
+        title: "Oops!",
+        text: "Something went wrong. Please try again.",
+        icon: "error",
+        confirmButtonText: "Try Again",
+        confirmButtonColor: "#C2603A",
+      });
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
-    <footer className="w-full bg-[#F0F0F0]">
-
-      {/* =====================================================
-          NEWSLETTER
-      ====================================================== */}
-
-      <div
-        className="
-          mx-auto
-          w-full
-          max-w-[1200px]
-          px-3
-          pt-5
-          sm:px-6
-          sm:pt-6
-          md:px-8
-          lg:px-10
-          xl:px-0
-        "
-      >
-        <div
-          className="
-            grid
-            grid-cols-1
-            gap-5
-            rounded-[10px]
-            bg-black
-            px-4
-            py-5
-            sm:px-6
-            sm:py-6
-            md:grid-cols-2
-            md:items-center
-            md:gap-8
-            md:px-8
-          "
-        >
-          {/* Newsletter heading */}
-          <h2
-            className="
-              font-integral
-              text-[22px]
-              font-bold
-              uppercase
-              leading-[105%]
-              text-white
-              sm:text-[26px]
-              md:text-[28px]
-              lg:text-[30px]
-            "
-          >
-            Stay Up to Date About
-            <br />
-            Our Latest Offers
-          </h2>
-
-          {/* Newsletter form */}
-          <div
-            className="
-              flex
-              w-full
-              flex-col
-              gap-2
-              md:ml-auto
-              md:max-w-[360px]
-            "
-          >
-            <input
-              type="email"
-              placeholder="✉  Enter your email address"
-              className="
-                h-9
-                w-full
-                rounded-full
-                border-none
-                bg-white
-                px-4
-                text-[9px]
-                text-black
-                outline-none
-                placeholder:text-black/40
-                sm:h-10
-                sm:text-[10px]
-              "
-            />
-
-            <Button
-              className="
-                h-9
-                w-full
-                max-w-none
-                border-0
-                bg-white
-                text-[9px]
-                hover:bg-[#F0F0F0]
-                hover:text-black
-                sm:h-10
-                sm:text-[10px]
-              "
+    <footer className="bg-dark-warm-charcoal pt-10 sm:pt-15 lg:pt-18 pb-4 sm:pb-5 md:pb-7 lg:pb-10">
+      <div className="max-w-360 w-full mx-auto px-4 lg:px-20">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-between gap-10 lg:gap-5">
+          {/* Brand */}
+          <div className="w-full max-w-95 flex flex-col items-start">
+            <a
+              href="/"
+              className="text-2xl sm:text-26 md:text-28 font-bold leading-118 text-soft-cream"
             >
-              Subscribe to Newsletter
-            </Button>
+              Clay<span className="text-orange-100">well</span>
+            </a>
+
+            <p className="mt-4 font-normal text-xs sm:text-15 leading-160 text-warm-gray-100">
+              Thoughtfully made crockery for everyday meals and special occasions.
+            </p>
           </div>
-        </div>
-      </div>
 
-      {/* =====================================================
-          FOOTER CONTENT
-      ====================================================== */}
+          {/* Link columns */}
+          <div className="max-w-74.25 w-full flex flex-row sm:justify-between gap-10 lg:gap-5">
+            {FOOTER_LINKS.map((section) => (
+              <div key={section.title} className="w-auto flex flex-col items-start">
+                <h3 className="text-sm sm:text-base font-medium leading-118 text-soft-cream mb-3">
+                  {section.title}
+                </h3>
 
-      <div
-        className="
-          mx-auto
-          grid
-          w-full
-          max-w-[1200px]
-          grid-cols-2
-          gap-x-6
-          gap-y-7
-          px-3
-          py-6
-          sm:px-6
-          sm:py-8
-          md:grid-cols-4
-          md:gap-8
-          md:px-8
-          lg:grid-cols-5
-          lg:px-10
-          xl:px-0
-        "
-      >
+                <ul className="flex flex-col gap-3">
+                  {section.links.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        className="footer-link hover:text-white text-xs sm:text-15 font-normal leading-118 text-warm-gray-100 transition-colors duration-300"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-        {/* =================================================
-            SHOP.CO
-        ================================================= */}
+          {/* Newsletter */}
+          <div className="w-full max-w-85 flex flex-col items-start">
+            <h3 className="text-sm sm:text-base font-medium leading-118 text-soft-cream mb-3.5">
+              Join our newsletter
+            </h3>
 
-        <div
-          className="
-            col-span-2
-            md:col-span-4
-            lg:col-span-1
-          "
-        >
-          {/* This is NOT your Logo component */}
-          <h2
-            className="
-              font-integral
-              text-[22px]
-              font-bold
-              leading-none
-              text-black
-              sm:text-[24px]
-            "
-          >
-            SHOP.CO
-          </h2>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="w-full flex items-center bg-dark-brown-900 rounded-[26px] p-1.5"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+                aria-label="Your email address"
+                required
+                className="min-w-0 flex-1 bg-transparent outline-none border-none px-3.5 text-xs sm:text-sm font-normal leading-118 text-white placeholder:text-warm-gray-500"
+              />
 
-          <Paragraph
-            className="
-              mt-2
-              max-w-[270px]
-              text-[9px]
-              leading-[145%]
-              sm:text-[10px]
-            "
-          >
-            We have clothes that suits your style and which you're proud to
-            wear. From women to men.
-          </Paragraph>
-
-          {/* Social icons */}
-          <div className="mt-4 flex items-center gap-2">
-            <SocialIcon>𝕏</SocialIcon>
-            <SocialIcon dark>f</SocialIcon>
-            <SocialIcon>◎</SocialIcon>
-            <SocialIcon>◉</SocialIcon>
+              <button
+                type="submit"
+                disabled={sending}
+                className="shrink-0 bg-orange-100 text-white text-xs sm:text-sm font-normal leading-118 px-3.5 sm:px-5 py-2 sm:py-3 rounded-[20px] transition-all duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {sending ? "Sending..." : "Subscribe"}
+              </button>
+            </form>
           </div>
         </div>
 
-        {/* =================================================
-            COMPANY
-        ================================================= */}
+        <div className="w-full h-px bg-dark-brown-800 mt-7 sm:mt-10 md:mt-12 lg:mt-14 mb-4 sm:mb-5 md:mb-7"></div>
 
-        <FooterColumn
-          title="Company"
-          links={companyLinks}
-        />
+        <div className="flex flex-row items-center justify-between gap-4">
+          <p className="font-normal sm:text-13 text-xs leading-118 text-warm-gray-500">
+            © {currentYear} Claywell. All rights reserved.
+          </p>
 
-        {/* =================================================
-            HELP
-        ================================================= */}
+          <div className="flex items-center gap-1 font-normal sm:text-13 text-xs leading-118 text-warm-gray-500">
+            <a href="/" className="footer-link hover:text-white transition-colors duration-300">
+              Privacy
+            </a>
 
-        <FooterColumn
-          title="Help"
-          links={helpLinks}
-        />
+            <span>·</span>
 
-        {/* =================================================
-            FAQ
-        ================================================= */}
-
-        <FooterColumn
-          title="FAQ"
-          links={faqLinks}
-        />
-
-        {/* =================================================
-            RESOURCES
-        ================================================= */}
-
-        <FooterColumn
-          title="Resources"
-          links={resourcesLinks}
-        />
-      </div>
-
-      {/* =====================================================
-          BOTTOM FOOTER
-      ====================================================== */}
-
-      <div
-        className="
-          mx-auto
-          flex
-          w-full
-          max-w-[1200px]
-          flex-col
-          gap-4
-          border-t
-          border-black/10
-          px-3
-          py-4
-          sm:px-6
-          md:flex-row
-          md:items-center
-          md:justify-between
-          md:px-8
-          lg:px-10
-          xl:px-0
-        "
-      >
-
-        {/* Copyright */}
-        <Paragraph
-          className="
-            text-center
-            text-[8px]
-            sm:text-[9px]
-            md:text-left
-          "
-        >
-          Shop.co © 2000-2023, All Rights Reserved
-        </Paragraph>
-
-        {/* Payment logos */}
-        <div className="flex items-center justify-center gap-1.5">
-          <PaymentLogo>
-            <span className="text-[#1434CB]">VISA</span>
-          </PaymentLogo>
-
-          <PaymentLogo>
-            <span>🔴</span>
-            <span>🟡</span>
-          </PaymentLogo>
-
-          <PaymentLogo>
-            <span className="text-[#0070BA]">Pay</span>
-          </PaymentLogo>
-
-          <PaymentLogo>
-            <span>Pay</span>
-          </PaymentLogo>
-
-          <PaymentLogo>
-            <span>G Pay</span>
-          </PaymentLogo>
+            <a href="/" className="footer-link hover:text-white transition-colors duration-300">
+              Terms
+            </a>
+          </div>
         </div>
       </div>
     </footer>

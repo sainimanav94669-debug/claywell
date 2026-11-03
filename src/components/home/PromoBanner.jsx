@@ -29,7 +29,7 @@ export default function PromoBanner() {
 
         <button 
           href="/collections/dinner-sets"
-          className="rounded-full cursor-pointer   px-8.25  py-4.5 text-base leading-[126%] font-medium group relative max-w-44.25 overflow-hidden border-0 bg-[#C2603A]! text-white transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full"
+          className="rounded-full cursor-pointer   px-8.25  py-4.5 text-base leading-[126%] font-medium group relative max-w-44.25 overflow-hidden border-0 bg-[#C2603A]! text-white transition-all duration-300 ease-out   hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full"
         >
           Grab the offer
         </button>

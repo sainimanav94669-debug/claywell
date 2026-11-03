@@ -88,13 +88,13 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
         role="dialog"
         aria-modal="true"
         aria-label="Shopping cart"
-        className={`absolute right-0 top-0 flex h-full w-full max-w-[420px] flex-col bg-white shadow-2xl transition-transform duration-300 motion-reduce:transition-none ${
+        className={`absolute right-0 top-0 flex h-full w-full max-w-110 flex-col bg-white shadow-2xl transition-transform duration-300 motion-reduce:transition-none ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-[#eee5dc] px-5 py-4">
-          <h2 className="text-base font-medium text-[#2B2622]">
+        <div className="flex items-center justify-between border-b max-w-110 border-[#eee5dc] px-6 py-6">
+          <h2 className="text-2xl leading-[117%] font-medium text-[#2B2622]">
             Your cart ({count})
           </h2>
           <button
@@ -102,35 +102,36 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
             type="button"
             onClick={closeCart}
             aria-label="Close cart"
-            className="grid h-8 w-8 place-items-center rounded-full bg-[#f3ece4] text-[#2B2622] transition-colors hover:bg-[#eadfd3]"
+            className="grid h-10 w-10 place-items-center rounded-full bg-[#f3ece4] text-[#2B2622] transition-colors hover:bg-[#eadfd3]"
           >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
-              <path d="M18 6 6 18M6 6l12 12" />
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.5 4.5L9 9M9 9L13.5 13.5M9 9L13.5 4.5M9 9L4.5 13.5" stroke-width="1.5" stroke-linecap="round" stroke="#2B2622"/>
+</svg>
+
           </button>
         </div>
 
         {empty ? (
           /* Empty state */
           <div className="flex flex-1 flex-col items-center justify-center px-10 text-center">
-            <div className="mb-6 grid h-16 w-16 place-items-center rounded-full bg-[#f7efe7] text-[#C2603A]">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <div className="mb-4 grid h-24 w-24 place-items-center rounded-full bg-[#F6F0E8] text-[#C2603A]">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <circle cx="9" cy="21" r="1" />
                 <circle cx="20" cy="21" r="1" />
                 <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
               </svg>
             </div>
-            <p className="text-base font-medium text-[#2B2622]">
+            <p className="text-[24px] font-medium leading-[117%] text-[#2B2622]">
               Your cart is empty
             </p>
-            <p className="mt-2 max-w-[240px] text-xs leading-relaxed text-[#7A6F65]">
+            <p className="mt-4 max-w-80.5 text-[15px] leading-[120%] font-normal text-[#5A5048]">
               Looks like you have not added any crockery yet. Browse our
               collections to find something you love.
             </p>
             <button
               type="button"
               onClick={() => goToProducts(closeCart)}
-              className="mt-6 rounded-full bg-[#C2603A] px-6 py-3 text-sm font-medium text-white transition hover:brightness-110"
+              className="mt-4 rounded-full bg-[#C2603A] px-3 py-4.5 text-base leading-[120%] min-w-[170px] font-medium text-white transition hover:brightness-110"
             >
               Start shopping
             </button>
@@ -142,7 +143,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
               {items.map((item) => (
                 <li
                   key={item.id}
-                  className="flex gap-3 border-b border-[#eee5dc] px-5 py-4"
+                  className="flex gap-4 border-b border-[#E6DCCF] px-6 py-5"
                 >
                   <img
                     src={item.image}
@@ -151,50 +152,51 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = FALLBACK_IMG;
                     }}
-                    className="h-16 w-14 shrink-0 rounded-lg object-cover"
+                    className="h-22 w-22 shrink-0 rounded-lg object-cover"
                   />
 
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-[13px] font-medium text-[#2B2622]">
+                    <p className="truncate text-[17px] leading-[118%] font-medium text-[#2B2622]">
                       {item.name}
                     </p>
-                    <p className="mt-0.5 text-[11px] text-[#7A6F65]">
+                    <p className="mt-1.5 text-[13px] font-normal leading-[116%] text-[#7A6F65]">
                       {item.description}
                     </p>
 
-                    <div className="mt-2 inline-flex items-center rounded-full border border-[#e5dbd0]">
+                    <div className="mt-1.5 inline-flex items-center rounded-full border border-[#E6DCCF]">
                       <button
                         type="button"
                         onClick={() => decrease(item.id)}
                         aria-label={`Decrease quantity of ${item.name}`}
-                        className="grid h-6 w-6 place-items-center rounded-full text-sm text-[#2B2622] hover:bg-[#f3ece4]"
+                        className="grid h-9 w-9 place-items-center rounded-full text-sm text-[#5A5048] hover:bg-[#f3ece4]"
                       >
                         −
                       </button>
-                      <span className="min-w-5 text-center text-xs tabular-nums text-[#2B2622]">
+                      <span className="min-w-4 text-center text-sm leading-[115%] tabular-nums text-[#2B2622]">
                         {item.qty}
                       </span>
                       <button
                         type="button"
                         onClick={() => increase(item.id)}
                         aria-label={`Increase quantity of ${item.name}`}
-                        className="grid h-6 w-6 place-items-center rounded-full text-sm text-[#2B2622] hover:bg-[#f3ece4]"
+                        className="grid h-9 w-9 place-items-center rounded-full text-sm text-[#2B2622] hover:bg-[#f3ece4]"
                       >
                         +
                       </button>
                     </div>
                   </div>
 
-                  <div className="flex flex-col items-end justify-between">
+                  <div className="flex flex-col items-end gap-9">
                     <button
                       type="button"
                       onClick={() => removeItem(item.id)}
                       aria-label={`Remove ${item.name}`}
                       className="text-[#a69b91] transition-colors hover:text-[#C2603A]"
                     >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6" />
-                      </svg>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 5.25H4.5M4.5 5.25H6.75M4.5 5.25L5.25 15H12.75L13.5 5.25M6.75 5.25H11.25M6.75 5.25V3H11.25V5.25M11.25 5.25H13.5M13.5 5.25H15M7.5 8.25V12.75M10.5 8.25V12.75" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" stroke="#9A8F85"/>
+</svg>
+
                     </button>
                     <span className="text-[13px] font-bold text-[#2B2622]">
                       {inr.format(item.price * item.qty)}
@@ -205,7 +207,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
             </ul>
 
             {/* Footer */}
-            <div className="border-t border-[#eee5dc] px-5 pb-5 pt-4">
+            <div className="border-t border-[#eee5dc] px-6 py-6 ">
               {coupon ? (
                 <div className="flex items-center justify-between rounded-lg bg-[#f7efe7] px-4 py-2.5 text-xs text-[#2B2622]">
                   <span>
@@ -223,17 +225,17 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleApply} className="flex items-center gap-2 rounded-lg bg-[#f7efe7] p-1">
+                <form onSubmit={handleApply} className="flex items-center gap-2 rounded-lg bg-[#f7efe7] pr-1.5">
                   <input
                     value={code}
                     onChange={(e) => setCode(e.target.value)}
                     placeholder="Discount code"
                     aria-label="Discount code"
-                    className="min-w-0 flex-1 bg-transparent px-3 py-2 text-xs uppercase text-[#2B2622] placeholder:normal-case placeholder:text-[#a69b91] focus:outline-none"
+                    className="min-w-0 flex-1 bg-transparent px-4 py-4 leading-[115%] text-sm uppercase text-[#9A8F85] placeholder:normal-case placeholder:text-[#a69b91] focus:outline-none"
                   />
                   <button
                     type="submit"
-                    className="rounded-md bg-[#2B2622] px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-[#c65e38]"
+                    className="rounded-md bg-[#2B2622] px-4 py-2.5 leading-[123%] text-[13px] font-medium text-white transition-colors hover:bg-[#c65e38]group relative max-w-44.25 overflow-hidden border-0   duration-300 ease-out cursor-pointer   hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)]   before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent   before:transition-transform before:duration-700 hover:before:translate-x-full "
                   >
                     Apply
                   </button>
@@ -246,9 +248,9 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                 </p>
               )}
 
-              <dl className="mt-4 space-y-2 text-xs text-[#2B2622]">
+              <dl className="mt-4.5 space-y-2 text-sm font-medium leading-[116%] text-[#5A5048]">
                 <div className="flex justify-between">
-                  <dt className="text-[#7A6F65]">Subtotal</dt>
+                  <dt className="text-[#5A5048]">Subtotal</dt>
                   <dd>{inr.format(subtotal)}</dd>
                 </div>
                 {discount > 0 && (
@@ -257,27 +259,27 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                     <dd>−{inr.format(discount)}</dd>
                   </div>
                 )}
-                <div className="flex justify-between">
-                  <dt className="text-[#7A6F65]">Shipping</dt>
+                <div className="flex justify-between text-sm font-medium  leading-[116%] my-3.5">
+                  <dt className=" text-[#5A5048]">Shipping</dt>
                   <dd>{shipping === 0 ? "Free" : inr.format(shipping)}</dd>
                 </div>
-                <div className="flex justify-between border-t border-[#eee5dc] pt-2 text-sm font-bold">
+                <div className="flex justify-between leading-[117%] text-[18px] font-medium">
                   <dt>Total</dt>
                   <dd>{inr.format(total)}</dd>
                 </div>
               </dl>
 
-              <a
+              <button
                 href={checkoutHref}
-                className="mt-4 block rounded-full bg-[#C2603A] py-3.5 text-center text-sm font-medium text-white transition hover:brightness-110"
+                className="mt-3.5 block rounded-full w-full bg-[#C2603A] py-4.5 text-center text-sm font-medium cursor-pointer text-white transition hover:brightness-110 group relative overflow-hidden border-0  duration-300 ease-out  hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
               >
                 Checkout - {inr.format(total)}
-              </a>
+              </button>
 
               <button
                 type="button"
                 onClick={() => goToProducts(closeCart)}
-                className="mt-3 block w-full text-center text-xs text-[#7A6F65] hover:text-[#2B2622]"
+                className="mt-3.5 block w-full text-center text-sm leading-[115%] text-[#5A5048] cursor-pointer hover:text-[#2B2622]"
               >
                 Continue shopping
               </button>

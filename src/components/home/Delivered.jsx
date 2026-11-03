@@ -1,4 +1,4 @@
- 
+
 import React from "react";
 import Info from "../common/Info"; 
 import Heading from "../common/Heading";
@@ -93,24 +93,24 @@ const Delivered = () => {
           </Heading>
         </div>
 
-        {/* Features */}
+        
         <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-4 lg:gap-x-6">
           {DELIVERED_DATA.map((item) => (
             <div
               key={item.heading}
               className="group flex min-w-0 flex-col items-start"
             >
-              {/* Icon */}
+              
               <div className="mb-3.5 flex size-10 items-center justify-center rounded-full bg-[#C65D35] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:shadow-lg sm:size-16">
                 <FeatureIcon type={item.icon} />
               </div>
 
-              {/* Title */}
+               
               <h3 className="mb-3.5 text-sm font-medium text-[#2B2622] leading-[119%] sm:text-[22px]">
                 {item.heading}
               </h3>
 
-              {/* Description */}
+               
               <p className="max-w-xs text-sm leading-5 text-[#5A5048] sm:text-sm sm:leading-[172%]">
                 {item.description}
               </p>

@@ -9,7 +9,7 @@ export default function CartButton() {
       type="button"
       onClick={openCart}
       aria-label={`Open cart, ${count} ${count === 1 ? "item" : "items"}`}
-      className="relative grid h-9 w-9 place-items-center rounded-full bg-[#2B2622] text-white transition-colors hover:bg-[#c65e38]"
+      className="relative grid h-9 w-9 place-items-center rounded-full color-dark-warm-charcoal  text-white transition-colors hover:bg-[#c65e38]"
     >
       <svg
         width="16"
