@@ -107,7 +107,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
 
         {empty ? (
           <div className="flex flex-1 flex-col items-center justify-center px-10 text-center">
-            <div className="mb-4 grid h-24 w-24 place-items-center rounded-full bg-[#F6F0E8] text-orange-100">
+            <div className="mb-4 grid h-24 w-24 place-items-center rounded-full bg-light-gray-500 text-orange-100">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <circle cx="9" cy="21" r="1" />
                 <circle cx="20" cy="21" r="1" />
