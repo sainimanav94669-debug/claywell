@@ -5,7 +5,7 @@ import Heading from "../common/Heading";
 
 const Collection = () => {
   return (
-    <section className='px-4 sm:px-10 lg:px-20 my-15 sm:my-20 lg:my-24'>
+    <section className='px-4 sm:px-10 lg:px-20 my-15 sm:my-20 lg:my-24 max-w-360 mx-auto'>
       <Info>COLLECTIONS</Info>
       <div className='flex items-end justify-between mt-2 mb-12 '>
         <Heading className='text-2xl! sm:text-4xl! lg:text-44! leading-119 '>Shop by category</Heading>
@@ -15,7 +15,7 @@ const Collection = () => {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <img
-            className="h-auto w-full max-h-75 sm:max-h-auto rounded-[20px]  object-cover"
+            className="h-auto w-full max-h-75 sm:max-h-full rounded-[20px]  object-cover"
             src="/images/webp/img-cat-dinner-sets.webp"
             alt="Dinner Sets"
           />
@@ -29,7 +29,7 @@ const Collection = () => {
 
         <div>
           <img
-            className="h-auto max-h-75 sm:max-h-auto rounded-[20px] w-full object-cover"
+            className="h-auto max-h-75  sm:max-h-full rounded-[20px] w-full object-cover"
             src="/images/webp/img-cat-mugs (1).webp"
             alt="Mugs & Cups"
           />
@@ -43,7 +43,7 @@ const Collection = () => {
 
         <div>
           <img
-            className="h-auto w-full max-h-75 sm:max-h-auto rounded-[20px]  object-cover"
+            className="h-auto w-full sm:max-h-full max-h-75 sm:max-h-auto rounded-[20px]  object-cover"
             src="/images/webp/img-cat-bowls (1).webp"
             alt="Serving Bowls"
           />
@@ -57,7 +57,7 @@ const Collection = () => {
 
         <div>
           <img
-            className="h-auto w-full max-h-75 sm:max-h-auto rounded-[20px] object-cover"
+            className="h-auto w-full sm:max-h-full max-h-75 sm:max-h-auto rounded-[20px] object-cover"
             src="/images/webp/img-cat-tea-sets.webp"
             alt="Tea Sets"
           />

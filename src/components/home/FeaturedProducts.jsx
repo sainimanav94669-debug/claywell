@@ -58,7 +58,7 @@ const FeaturedProducts = () => {
   const { addItem } = useCart(); // adds to cart and opens the cart popup
 
   return (
-    <section className="w-full pb-15 sm:pb-20 lg:pb-24 px-4 sm:px-10 lg:px-20">
+    <section className="w-full pb-15 sm:pb-20 lg:pb-24 px-4 sm:px-10 lg:px-20 max-w-360 mx-auto">
       <div className="mx-auto">
         {/* Heading */}
         <div className="mb-12 flex items-end   justify-between gap-4">

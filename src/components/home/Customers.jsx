@@ -29,10 +29,10 @@ const CUSTOMER_DATA = [
 
 const Customers = () => {
   return (
-    <section className="w-full bg-[#FAF6F1] px-4 sm:px-10 lg:px-20.25 py-15 sm:py-20 lg:py-24">
+    <section className="w-full bg-[#FAF6F1] px-4 sm:px-10 lg:px-20.25 py-15 sm:py-20 lg:py-24 max-w-360 mx-auto">
       <div className="mx-auto  ">
 
-        {/* Section Heading */}
+        
         <div className="sm:mb-10 text-center mb-8 lg:mb-14">
           <Info className="mb-2 text-10 font-medium uppercase tracking-[2px] text-orange-100">
             Loved by customers
@@ -43,14 +43,14 @@ const Customers = () => {
           </Heading>
         </div>
 
-        {/* Customer Reviews */}
+        
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {CUSTOMER_DATA.map((customer) => (
             <article
               key={customer.name}
               className="group flex h-full flex-col rounded-[20px] border border-light-cream bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-100 hover:shadow-lg sm:py-8 sm:pr-7.5 sm:pl-8"
             >
-              {/* Star Rating */}
+              
               <div
                 className="mb-5 "
                >

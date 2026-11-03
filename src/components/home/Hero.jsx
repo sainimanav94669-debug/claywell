@@ -6,7 +6,7 @@ import Button from "../common/Button";
 
 const Hero = () => {
     return (
-        <section className='lg:px-20 sm:px-10 px-4 '>
+        <section className='lg:px-20 sm:px-10 px-4 max-w-360 mx-auto '>
             <div className='flex max-[992px]:flex-col items-center justify-between my-8 sm:my-10 gap-10 sm:gap-16'>
                 <div className='max-w-150'>
                     <Info>HANDCRAFTED CERAMICS</Info>
