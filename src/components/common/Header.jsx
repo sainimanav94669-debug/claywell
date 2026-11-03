@@ -201,10 +201,7 @@ const Header = () => {
                   >
                     {item.name}
 
-                    <ArrowUpRight
-                      size={20}
-                      className="text-mid-gray-300 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-orange-100"
-                    />
+                    
                   </a>
                 </li>
               ))}
@@ -212,14 +209,7 @@ const Header = () => {
           </nav>
 
 
-          <div className="border-t border-mid-cream px-6 py-6">
-            <p className="text-sm text-warm-gray-500">
-              Thoughtfully made for your everyday moments.
-            </p>
-            <p className="mt-2 text-xs text-mid-gray-300">
-              © {new Date().getFullYear()} Claywell
-            </p>
-          </div>
+           
         </aside>
       </div>
 
