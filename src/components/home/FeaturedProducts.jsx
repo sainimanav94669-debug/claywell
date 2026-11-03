@@ -9,8 +9,7 @@ const inr = new Intl.NumberFormat("en-IN", {
   maximumFractionDigits: 0,
 });
 
-// price / oldPrice are numbers so the cart can add them up.
-// category "dinner-sets" makes a product eligible for the CLAY30 code.
+ 
 const products = [
   {
     id: 1,
@@ -55,12 +54,12 @@ const products = [
 ];
 
 const FeaturedProducts = () => {
-  const { addItem } = useCart(); // adds to cart and opens the cart popup
+  const { addItem } = useCart(); 
 
   return (
     <section className="w-full pb-15 sm:pb-20 lg:pb-24 px-4 sm:px-10 lg:px-20 max-w-360 mx-auto">
       <div className="mx-auto">
-        {/* Heading */}
+        
         <div className="mb-12 flex items-end   justify-between gap-4">
           <div>
             <Info className="mb-2 text-10 font-semibold uppercase tracking-[2px] text-orange-100">
@@ -80,22 +79,20 @@ const FeaturedProducts = () => {
           </a>
         </div>
 
-        {/* Product Cards */}
-        <div
+         <div
           id="products"
           className="grid max-[680px]:grid-cols-1 gap-5 max-[1026px]:grid-cols-2 grid-cols-4"
         >
           {products.map((product) => (
             <div
               key={product.id}
-              className="group rounded-2xl border border-light-cream bg-white pt-4 pl-4 pr-3.5 pb-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="group rounded-2xl border border-light-cream bg-white pt-4 pl-4 pr-3.5 pb-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              {/* Product Image */}
-              <div className="relative overflow-hidden rounded-[20px]">
+               <div className="relative  rounded-[20px]">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-auto max-h-75 sm:max-h-auto w-full object-cover rounded-[14px] transition-transform duration-500 group-hover:scale-105 sm:h-67.5"
+                  className="h-auto max-h-75 sm:max-h-auto w-full xl:max-w-67.5 object-cover rounded-[14px] transition-transform duration-500 group-hover:scale-105 sm:h-67.5"
                 />
 
                 {product.badge && (
@@ -105,8 +102,7 @@ const FeaturedProducts = () => {
                 )}
               </div>
 
-              {/* Product Information */}
-              <div className="pt-3">
+               <div className="pt-3.5">
                 <h3 className="text-xl font-medium leading-115 text-dark-warm-charcoal">
                   {product.name}
                 </h3>
@@ -115,8 +111,7 @@ const FeaturedProducts = () => {
                   {product.description}
                 </p>
 
-                {/* Price and Add Button */}
-                <div className="mt-3 flex items-center justify-between gap-2 mr-0.5">
+                 <div className="mt-3.5 flex items-center justify-between gap-2 mr-0.5">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xl leading-115 font-bold text-dark-warm-charcoal">
                       {inr.format(product.price)}

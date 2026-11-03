@@ -6,7 +6,7 @@ import CartDrawer from "../cart/CartDrawer";
 const Header = () => {
   const [search, setSearch] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
-  const { count, openCart } = useCart(); // live cart count + open the drawer
+  const { count, openCart } = useCart();  
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -50,8 +50,7 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Search and Cart */}
-          <div className="flex items-center gap-5">
+           <div className="flex items-center gap-5">
             <form
               onSubmit={handleSearch}
               className="hidden w-60 items-center rounded-full border border-mid-cream bg-white px-4.5 py-3.25 sm:flex"
@@ -139,8 +138,7 @@ const Header = () => {
         )}
       </header>
 
-      {/* Cart popup (slides in from the right) */}
-      <CartDrawer />
+       <CartDrawer />
     </>
   );
 };

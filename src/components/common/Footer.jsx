@@ -2,8 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
-// Change the hrefs to your real pages
-export const FOOTER_LINKS = [
+ export const FOOTER_LINKS = [
   {
     title: "Shop",
     links: [
@@ -31,7 +30,7 @@ const Footer = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    if (sending) return; // stop double submits
+    if (sending) return;  
 
     setSending(true);
     try {
@@ -81,8 +80,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Link columns */}
-          <div className="max-w-74.25 w-full flex flex-row sm:justify-between gap-10 lg:gap-5">
+           <div className="max-w-74.25 w-full flex flex-row sm:justify-between gap-10 lg:gap-5">
             {FOOTER_LINKS.map((section) => (
               <div key={section.title} className="w-auto flex flex-col items-start">
                 <h3 className="text-sm sm:text-base font-medium leading-118 text-soft-cream mb-3">
@@ -122,7 +120,7 @@ const Footer = () => {
                 placeholder="Your email address"
                 aria-label="Your email address"
                 required
-                className="min-w-0 flex-1 bg-transparent bg-primary! outline-none border-none px-3.5 text-xs sm:text-sm font-normal leading-118 text-white placeholder:text-warm-gray-500"
+                className="newsletter-email min-w-0 flex-1 bg-transparent  outline-none border-none px-3.5 text-xs sm:text-sm font-normal leading-118 text-white placeholder:text-warm-gray-500"
               />
 
               <button

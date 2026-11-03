@@ -6,15 +6,14 @@ export default function PromoBanner() {
     <section className="px-4 sm:px-10 lg:px-20">
          <div
       aria-label="Festive sale"
-      className=" grid w-full  max-w-7xl mx-auto   grid-cols-1 overflow-hidden rounded-[28px] bg-[#2a2321] font-sans text-white md:min-h-84 mb-15 sm:mb-20 lg:mb-24 md:grid-cols-2"
+      className=" grid w-full  max-w-7xl mx-auto   grid-cols-1 overflow-hidden rounded-[32px] bg-dark-warm-charcoal font-sans text-white md:min-h-84 mb-15 sm:mb-20 lg:mb-24 md:grid-cols-2"
     >
-      {/* Text side */}
-      <div className="flex flex-col items-start justify-center gap-4 sm:gap-5 px-10 sm:px-16 py-4 md:py-5.5 ">
+       <div className="flex flex-col items-start justify-center gap-4 sm:gap-5 px-10 sm:px-16 py-4 md:py-5.5 ">
         <Info className="text-11 uppercase tracking-[0.2em] text-orange-300">
           Festive sale
         </Info>
 
-        <Heading className=" text-2xl! max-w-120 sm:text-4xl! lg:text-44! leading-137 text-soft-cream!">
+        <Heading className=" text-2xl! max-w-120 sm:text-4xl! lg:text-52! leading-115 text-soft-cream!">
           Up to 30% off dinner sets
         </Heading>
 
@@ -23,7 +22,7 @@ export default function PromoBanner() {
           till 15 November.
         </p>
 
-        <span className="rounded-[10px] leading-110 border-[1.5px] border-dashed border-orange-100 px-6 py-3.75 text-15 font-semibold tracking-[0.2em] text-orange-300">
+        <span className="rounded-[10px] max-w-28 leading-110 border-[1.5px] border-dashed border-orange-100 px-5 py-3.75 text-15 font-bold tracking-[0.2em] text-orange-300">
           CLAY30
         </span>
 
@@ -35,8 +34,7 @@ export default function PromoBanner() {
         </button>
       </div>
 
-      {/* Photo side (file lives in /public/dinner-table.jpg) */}
-      <div className="relative order-first h-52 md:order-0 md:h-auto">
+       <div className="relative order-first h-52 md:order-0 md:h-auto">
         <img
           src="/images/webp/img-offer (1).webp"
           alt="A festive dinner table set with candles, plates and autumn foliage"

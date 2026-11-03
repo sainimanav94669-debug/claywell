@@ -10,18 +10,17 @@ import {
 const CART_KEY = "claywell-cart-v2";
 const COUPON_KEY = "claywell-coupon";
 
-// ---- Store rules (edit these) ---------------------------------
-export const FREE_SHIPPING_MIN = 1999; // free shipping above this amount
-export const SHIPPING_FEE = 99; // otherwise
+ export const FREE_SHIPPING_MIN = 1999;  
+export const SHIPPING_FEE = 99;  
 const COUPONS = {
-  // 30% off products whose category is "dinner-sets", valid till 15 Nov (end of day)
+  
   CLAY30: {
     percent: 30,
     category: "dinner-sets",
     expires: () => new Date(new Date().getFullYear(), 10, 15, 23, 59, 59),
   },
 };
-// ----------------------------------------------------------------
+
 
 const CartContext = createContext(null);
 
@@ -52,18 +51,23 @@ export function CartProvider({ children }) {
   const openCart = useCallback(() => setIsOpen(true), []);
   const closeCart = useCallback(() => setIsOpen(false), []);
 
-  // Add product (opens the drawer by default)
-  const addItem = useCallback((product, { open = true } = {}) => {
-    setItems((list) => {
-      const found = list.find((i) => i.id === product.id);
-      if (found)
-        return list.map((i) =>
-          i.id === product.id ? { ...i, qty: i.qty + 1 } : i
-        );
-      return [...list, { ...product, qty: 1 }];
-    });
-    if (open) setIsOpen(true);
-  }, []);
+   const addItem = useCallback((product, { open = false } = {}) => {
+  setItems((list) => {
+    const found = list.find((i) => i.id === product.id);
+
+    if (found) {
+      return list.map((i) =>
+        i.id === product.id
+          ? { ...i, qty: i.qty + 1 }
+          : i
+      );
+    }
+
+    return [...list, { ...product, qty: 1 }];
+  });
+
+  if (open) setIsOpen(true);
+}, []);
 
   const increase = useCallback(
     (id) =>
@@ -93,7 +97,7 @@ export function CartProvider({ children }) {
 
   const removeCoupon = useCallback(() => setCouponCode(""), []);
 
-  // Totals
+   
   const totals = useMemo(() => {
     const count = items.reduce((n, i) => n + i.qty, 0);
     const subtotal = items.reduce((n, i) => n + i.price * i.qty, 0);
@@ -121,7 +125,7 @@ export function CartProvider({ children }) {
     };
   }, [items, couponCode]);
 
-  // Returns { ok, message }
+   
   const applyCoupon = useCallback(
     (raw) => {
       const code = raw.trim().toUpperCase();

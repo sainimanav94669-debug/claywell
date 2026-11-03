@@ -16,6 +16,7 @@
   --color-light-cream: #EFE6DA;
   --color-light-gray-300: #4A4038;
   --color-orange-300: #F0A987;
+  --color-light-gray-500: #F6F0E8;
 
    
   --text-10: 10px;
@@ -31,6 +32,7 @@
   --text-32: 32px;
   --text-44: 44px;
   --text-50: 50px;
+  --text-52: 52px;
   --text-68: 68px;
 
    
@@ -94,7 +96,30 @@ body {
   transform: scaleX(1);
 }
 
-
+.newsletter-email:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 9999s ease-in-out 0s;
+  caret-color: white;
+}
+.newsletter-email:-webkit-autofill:hover{
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 9999s ease-in-out 0s;
+  caret-color: white;
+}
+.newsletter-email:-webkit-autofill:focus{
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 9999s ease-in-out 0s;
+  caret-color: white;
+}
+.newsletter-email:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 9999s ease-in-out 0s;
+  caret-color: white;
+}
 
 ::-webkit-scrollbar {
   width: 10px;

@@ -1,7 +1,6 @@
 import { useCart } from "../../context/CartContext";
 
-// Drop this into your Navbar where the dark cart icon is.
-export default function CartButton() {
+ export default function CartButton() {
   const { count, openCart } = useCart();
 
   return (
