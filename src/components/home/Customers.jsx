@@ -34,11 +34,11 @@ const Customers = () => {
 
         {/* Section Heading */}
         <div className="sm:mb-10 text-center mb-8 lg:mb-14">
-          <Info className="mb-2 text-[10px] font-medium uppercase tracking-[2px] text-[#C65D35]">
+          <Info className="mb-2 text-10 font-medium uppercase tracking-[2px] text-orange-100">
             Loved by customers
           </Info>
 
-          <Heading className="text-2xl! sm:text-4xl! lg:text-[44px]! leading-[119%]">
+          <Heading className="text-2xl! sm:text-4xl! lg:text-44! leading-119">
             What our customers say
           </Heading>
         </div>
@@ -48,7 +48,7 @@ const Customers = () => {
           {CUSTOMER_DATA.map((customer) => (
             <article
               key={customer.name}
-              className="group flex h-full flex-col rounded-[20px] border border-[#EFE6DA] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#C65D35]/40 hover:shadow-lg sm:py-8 sm:pr-7.5 sm:pl-8"
+              className="group flex h-full flex-col rounded-20 border border-light-cream bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-100 hover:shadow-lg sm:py-8 sm:pr-7.5 sm:pl-8"
             >
               {/* Star Rating */}
               <div
@@ -72,22 +72,22 @@ const Customers = () => {
               </div>
 
              
-              <p className="mb-5 grow text-sm leading-5 text-[#554B44] sm:text-base sm:leading-[163%] font-normal">
+              <p className="mb-5 grow text-sm leading-5 text-light-gray-300 sm:text-base sm:leading-163 font-normal">
                 {customer.message}
               </p>
 
                
               <div className="mt-auto flex items-center gap-3">
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#C2603A] text-sm font-medium text-white transition-transform duration-300 group-hover:scale-110">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-medium text-white transition-transform duration-300 group-hover:scale-110">
                   {customer.tag}
                 </div>
 
                 <div className="min-w-0">
-                  <h3 className="text-[15px] font-medium leading-[120%] text-[#302C29] ">
+                  <h3 className="text-15 font-medium leading-120 text-dark-warm-charcoal ">
                     {customer.name}
                   </h3>
 
-                  <p className=" text-[#7A6F65] mt-0.5 font-normal leading-[116%] sm:text-[13px]">
+                  <p className=" text-warm-gray-200 mt-0.5 font-normal leading-116 sm:text-13">
                     {customer.location}
                   </p>
                 </div>

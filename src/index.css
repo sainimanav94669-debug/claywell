@@ -4,23 +4,54 @@
   
   --color-dark-warm-charcoal: #2B2622;
   --color-soft-cream: #FAF6F0;
+  --color-mid-cream: #E6DCCF;
   --color-orange-100: #C2603A;
   --color-warm-gray-100: #CFC4B8;
   --color-dark-brown-900: #3A332D;
+  --color-mid-gray-300: #9A8F85;
   --color-warm-gray-500: #8F857B;
-  --color-dark-brown-800: #4A423B;
+  --color-dark-brown-800: #4A423B;  
+  --color-warm-gray-200: #7A6F65;
+  --color-dark-brown-900: #5A5048;
+  --color-light-cream: #EFE6DA;
+  --color-light-gray-300: #4A4038;
+  --color-orange-300: #F0A987;
 
    
+  --text-10: 10px;
+  --text-11: 11px;
   --text-13: 13px;
   --text-15: 15px;
   --text-17: 17px;
+  --text-18: 18px;
+  --text-22: 22px;
   --text-26: 26px;
   --text-28: 28px;
+  --text-30: 30px;
+  --text-32: 32px;
+  --text-44: 44px;
+  --text-50: 50px;
+  --text-68: 68px;
 
    
   --leading-100: 100%;
+  --leading-110: 110%;
+  --leading-112: 112%;
+  --leading-115: 115%;
+  --leading-116: 116%;
+  --leading-117: 117%;
   --leading-118: 118%;
-  --leading-160: 160%;
+  --leading-119: 119%;
+  --leading-120: 120%;
+  --leading-123: 123%;
+  --leading-126: 126%;
+  --leading-137: 137%;
+  --leading-163: 163%;
+  --leading-172: 172%;
+
+
+  --rounded-10: 10px;
+  --rounded-20: 20px;
 }
 
 

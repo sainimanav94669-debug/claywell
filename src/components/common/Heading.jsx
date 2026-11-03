@@ -2,7 +2,7 @@ const Heading = ({ children, className = "" }) => {
     
   return (
     <h2
-      className={`     text-[30px] leading-[112%] font-medium  text-[#2B2622] sm:text-[50px] lg:text-[68px] ${className}`}>
+      className={`     text-30 leading-112 font-medium  text-dark-warm-charcoal sm:text-50 lg:text-68 ${className}`}>
       {children}
     </h2>
   );

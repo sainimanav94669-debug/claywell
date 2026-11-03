@@ -88,7 +88,7 @@ const Delivered = () => {
             Why ClayWell
           </Info>
 
-          <Heading className="text-2xl! sm:text-4xl! lg:text-[44px]! leading-[119%]">
+          <Heading className="text-2xl! sm:text-4xl! lg:text-44! leading-119">
             Made well, delivered with care
           </Heading>
         </div>
@@ -101,17 +101,17 @@ const Delivered = () => {
               className="group flex min-w-0 flex-col items-start"
             >
               
-              <div className="mb-3.5 flex size-10 items-center justify-center rounded-full bg-[#C65D35] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:shadow-lg sm:size-16">
+              <div className="mb-3.5 flex size-10 items-center justify-center rounded-full bg-orange-100 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:shadow-lg sm:size-16">
                 <FeatureIcon type={item.icon} />
               </div>
 
                
-              <h3 className="mb-3.5 text-sm font-medium text-[#2B2622] leading-[119%] sm:text-[22px]">
+              <h3 className="mb-3.5 text-sm font-medium text-dark-warm-charcoal leading-119 sm:text-22">
                 {item.heading}
               </h3>
 
                
-              <p className="max-w-xs text-sm leading-5 text-[#5A5048] sm:text-sm sm:leading-[172%]">
+              <p className="max-w-xs text-sm leading-5 text-dark-brown-900 sm:text-sm sm:leading-172">
                 {item.description}
               </p>
             </div>

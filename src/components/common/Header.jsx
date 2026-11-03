@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full border-b border-[#e8e1d8] bg-[#FAF6F0] py-2 sm:py-4 overflow-hidden">
+      <header className="w-full border-b border-mid-cream bg-soft-cream py-2 sm:py-4 overflow-hidden">
         <nav className="mx-auto flex max-w-360 items-center justify-between px-4 sm:px-10 lg:px-20">
           <a href="/" className="shrink-0">
             <img
@@ -42,7 +42,7 @@ const Header = () => {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="text-[15px] leading-[100%] font-medium text-[#5A5048] transition-all duration-300 hover:text-[#c65d3d]"
+                  className="text-15 leading-100 font-medium text-dark-brown-900 transition-all duration-300 hover:text-orange-100"
                 >
                   {item.name}
                 </a>
@@ -54,14 +54,14 @@ const Header = () => {
           <div className="flex items-center gap-5">
             <form
               onSubmit={handleSearch}
-              className="hidden w-60 items-center rounded-full border border-[#E6DCCF] bg-white px-4.5 py-3.25 sm:flex"
+              className="hidden w-60 items-center rounded-full border border-mid-cream bg-white px-4.5 py-3.25 sm:flex"
             >
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search crockery..."
-                className="w-full bg-transparent text-sm leading-[115%] outline-none placeholder:text-[#9A8F85]"
+                className="w-full bg-transparent text-sm leading-115 outline-none placeholder:text-mid-gray-300"
               />
             </form>
 
@@ -69,7 +69,7 @@ const Header = () => {
               type="button"
               onClick={openCart}
               aria-label={`Shopping cart, ${count} ${count === 1 ? "item" : "items"}`}
-              className="relative flex sm:h-12 h-9 w-9 sm:w-12 cursor-pointer items-center justify-center rounded-full bg-[#292522] text-white transition-colors hover:bg-[#c65d3d]"
+              className="relative flex sm:h-12 h-9 w-9 sm:w-12 cursor-pointer items-center justify-center rounded-full bg-dark-warm-charcoal text-white transition-colors hover:bg-orange-100"
             >
               <svg
                 width="22"
@@ -104,7 +104,7 @@ const Header = () => {
               </svg>
 
               {count > 0 && (
-                <span className="absolute -right-0.75 -top-0.75 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#c65d3d] px-1 text-[11px] font-bold">
+                <span className="absolute -right-0.75 -top-0.75 flex h-5 min-w-5 items-center justify-center rounded-full bg-orange-100 px-1 text-11 font-bold">
                   {count > 99 ? "99+" : count}
                 </span>
               )}
@@ -121,14 +121,14 @@ const Header = () => {
         </nav>
 
         {menuOpen && (
-          <div className="border-t border-[#e8e1d8] bg-[#f8f5ef] px-5 py-4 lg:hidden">
+          <div className="border-t border-mid-cream bg-soft-cream px-5 py-4 lg:hidden">
             <ul className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <a
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-sm text-[#49413a] hover:text-[#c65d3d]"
+                    className="text-sm text-warm-gray-500 hover:text-orange-100"
                   >
                     {item.name}
                   </a>

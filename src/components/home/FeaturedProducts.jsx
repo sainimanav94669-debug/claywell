@@ -63,18 +63,18 @@ const FeaturedProducts = () => {
         {/* Heading */}
         <div className="mb-12 flex items-end px-4 justify-between gap-4">
           <div>
-            <Info className="mb-2 text-[10px] font-semibold uppercase tracking-[2px] text-[#c65b32]">
+            <Info className="mb-2 text-10 font-semibold uppercase tracking-[2px] text-orange-100">
               Bestsellers
             </Info>
 
-            <Heading className="text-2xl! sm:text-4xl! lg:text-[44px]! leading-[119%]">
+            <Heading className="text-2xl! sm:text-4xl! lg:text-44! leading-119">
               Featured products
             </Heading>
           </div>
 
           <a
             href="#products"
-            className="text-[15px] leading-[120%] font-medium text-[#C2603A] cursor-pointer hover:text-[#2B2622] transition-all duration-300"
+            className="text-15 leading-120 font-medium text-orange-100 cursor-pointer hover:text-dark-warm-charcoal transition-all duration-300"
           >
             Shop all →
           </a>
@@ -88,7 +88,7 @@ const FeaturedProducts = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="group rounded-2xl border border-[#eee5dc] bg-white pt-4 pl-4 pr-3.5 pb-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="group rounded-2xl border border-light-cream bg-white pt-4 pl-4 pr-3.5 pb-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               {/* Product Image */}
               <div className="relative overflow-hidden rounded-[20px]">
@@ -99,7 +99,7 @@ const FeaturedProducts = () => {
                 />
 
                 {product.badge && (
-                  <span className="absolute left-3 top-3 rounded-full bg-[#C2603A] px-3 py-1.75 text-[12px] leading-3.5 font-medium text-white">
+                  <span className="absolute left-3 top-3 rounded-full bg-orange-100 px-3 py-1.75 text-[12px] leading-3.5 font-medium text-white">
                     {product.badge}
                   </span>
                 )}
@@ -107,23 +107,23 @@ const FeaturedProducts = () => {
 
               {/* Product Information */}
               <div className="pt-3">
-                <h3 className="text-xl font-medium leading-5.75 text-[#2B2622]">
+                <h3 className="text-xl font-medium leading-115 text-dark-warm-charcoal">
                   {product.name}
                 </h3>
 
-                <p className="mt-1 text-[13px] font-normal leading-3.75 text-[#7A6F65]">
+                <p className="mt-1 text-13 font-normal leading-116 text-warm-gray-200">
                   {product.description}
                 </p>
 
                 {/* Price and Add Button */}
                 <div className="mt-3 flex items-center justify-between gap-2 mr-0.5">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xl leading-5.75 font-bold text-[#2B2622]">
+                    <span className="text-xl leading-115 font-bold text-dark-warm-charcoal">
                       {inr.format(product.price)}
                     </span>
 
                     {product.oldPrice > 0 && (
-                      <span className="text-sm leading-4 text-[#a69b91] line-through">
+                      <span className="text-sm leading-115 text-mid-gray-300 line-through">
                         {inr.format(product.oldPrice)}
                       </span>
                     )}
@@ -133,7 +133,7 @@ const FeaturedProducts = () => {
                     type="button"
                     onClick={() => addItem(product)}
                     aria-label={`Add ${product.name} to cart`}
-                    className="rounded-full bg-[#2B2622] px-5 leading-4 py-3.5 text-sm font-medium text-white transition-all duration-300 cursor-pointer hover:bg-[#c65e38] active:scale-95 group relative max-w-44.25 overflow-hidden border-0 ease-out   hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)]   before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
+                    className="rounded-full bg-dark-warm-charcoal px-5 leading-4 py-3.5 text-sm font-medium text-white transition-all duration-300 cursor-pointer hover:bg-orange-100 active:scale-95 group relative max-w-44.25 overflow-hidden border-0 ease-out   hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)]   before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
                   >
                     + Add
                   </button>

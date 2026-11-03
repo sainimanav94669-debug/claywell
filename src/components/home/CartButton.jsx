@@ -9,7 +9,7 @@ export default function CartButton() {
       type="button"
       onClick={openCart}
       aria-label={`Open cart, ${count} ${count === 1 ? "item" : "items"}`}
-      className="relative grid h-9 w-9 place-items-center rounded-full color-dark-warm-charcoal  text-white transition-colors hover:bg-[#c65e38]"
+      className="relative grid h-9 w-9 place-items-center rounded-full bg-dark-warm-charcoal  text-white transition-colors hover:bg-orange-100"
     >
       <svg
         width="16"
@@ -28,7 +28,7 @@ export default function CartButton() {
       </svg>
 
       {count > 0 && (
-        <span className="absolute -right-1 -top-1 grid min-h-4.5 min-w-4.5 place-items-center rounded-full bg-[#C2603A] px-1 text-[10px] font-semibold leading-none text-white">
+        <span className="absolute -right-1 -top-1 grid min-h-4.5 min-w-4.5 place-items-center rounded-full bg-orange-100 px-1 text-10 font-semibold leading-none text-white">
           {count > 99 ? "99+" : count}
         </span>
       )}
