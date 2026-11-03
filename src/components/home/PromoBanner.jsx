@@ -6,7 +6,7 @@ export default function PromoBanner() {
     <section className="px-4 sm:px-10 lg:px-20">
          <div
       aria-label="Festive sale"
-      className=" grid w-full  max-w-7xl mx-auto   grid-cols-1 overflow-hidden rounded-[32px] bg-dark-warm-charcoal font-sans text-white md:min-h-84 mb-15 sm:mb-20 lg:mb-24 md:grid-cols-2"
+      className=" grid w-full  max-w-7xl mx-auto   grid-cols-1 overflow-hidden rounded-4xl bg-dark-warm-charcoal font-sans text-white md:min-h-84 mb-15 sm:mb-20 lg:mb-24 md:grid-cols-2"
     >
        <div className="flex flex-col items-start justify-center gap-4 sm:gap-5 px-10 sm:px-16 py-4 md:py-5.5 ">
         <Info className="text-11 uppercase tracking-[0.2em] text-orange-300">
