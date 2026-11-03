@@ -92,7 +92,7 @@ const FeaturedProducts = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-auto max-h-75 sm:max-h-auto w-full xl:max-w-67.5 object-cover rounded-[14px] transition-transform duration-500 group-hover:scale-105 sm:h-67.5"
+                  className="h-auto max-h-75 sm:max-h-auto w-full xl:max-w-67.5 object-cover rounded-[14px] transition-transform duration-500   sm:h-67.5"
                 />
 
                 {product.badge && (
