@@ -4,6 +4,8 @@ import Info from "../common/Info";
 import Heading from "../common/Heading";
 
 
+
+
 const DELIVERED_DATA = [
   {
     icon: "shield",
@@ -82,7 +84,7 @@ const Delivered = () => {
   return (
     <section className="w-full bg-[#F2E8DC] px-4 sm:px-10 lg:px-20">
       <div className="mx-auto max-w-7xl py-15 sm:py-20 lg:py-24">
-        {/* Heading */}
+         
         <div className="mb-8 text-center sm:mb-10 lg:mb-14">
           <Info className="mb-2">
             Why ClayWell
