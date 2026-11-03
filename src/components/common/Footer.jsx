@@ -89,7 +89,7 @@ const Footer = () => {
 
                 <ul className="flex flex-col gap-3">
                   {section.links.map((link) => (
-                    <li key={link.label}>
+                    <li key={link.label} className="leading-118">
                       <a
                         href={link.href}
                         className="footer-link hover:text-white text-xs sm:text-15 font-normal leading-118 text-warm-gray-100 transition-colors duration-300"
@@ -112,7 +112,7 @@ const Footer = () => {
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="w-full flex items-center bg-dark-brown-900 rounded-[26px] p-1.5"
+              className="w-full flex items-center bg-dark-brown-700 rounded-[26px] p-1.5"
             >
               <input
                 type="email"

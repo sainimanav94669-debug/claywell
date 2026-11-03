@@ -87,7 +87,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
         className={`absolute right-0 top-0 flex h-full w-full max-w-110 flex-col bg-white shadow-2xl transition-transform duration-300 motion-reduce:transition-none ${isOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
-        <div className="flex items-center justify-between border-b max-w-110 border-[#eee5dc] px-6 py-6">
+        <div className="flex items-center justify-between border-b max-w-110 border-mid-cream px-6 py-6">
           <h2 className="text-2xl leading-117 font-medium text-dark-warm-charcoal">
             Your cart ({count})
           </h2>
@@ -155,12 +155,12 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                       {item.description}
                     </p>
 
-                    <div className="mt-1.5 inline-flex items-center rounded-full border border-mid-cream">
+                    <div className="mt-1.5 inline-flex items-center gap-0.5 rounded-full border border-mid-cream">
                       <button
                         type="button"
                         onClick={() => decrease(item.id)}
                         aria-label={`Decrease quantity of ${item.name}`}
-                        className="grid h-9 w-9 place-items-center cursor-pointer rounded-full text-sm text-dark-brown-900 hover:bg-[#f3ece4]"
+                        className="grid h-8.75 w-8.75 place-items-center cursor-pointer rounded-full text-sm text-dark-brown-900 hover:bg-[#f3ece4]"
                       >
                         −
                       </button>
@@ -171,7 +171,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                         type="button"
                         onClick={() => increase(item.id)}
                         aria-label={`Increase quantity of ${item.name}`}
-                        className="grid h-9 w-9 cursor-pointer place-items-center rounded-full text-sm text-dark-warm-charcoal hover:bg-[#f3ece4]"
+                        className="grid h-8.75 w-8.75 cursor-pointer place-items-center rounded-full text-sm text-dark-warm-charcoal hover:bg-[#f3ece4]"
                       >
                         +
                       </button>
@@ -198,7 +198,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
               ))}
             </ul>
 
-            <div className="border-t border-[#eee5dc] px-6 py-6 ">
+            <div className="border-t border-mid-cream px-6 py-6 ">
               {coupon ? (
                 <div className="flex items-center justify-between rounded-lg bg-[#f7efe7] px-4 py-2.5 text-xs text-dark-warm-charcoal">
                   <span>
@@ -239,7 +239,7 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                 </p>
               )}
 
-              <dl className="mt-4.5 space-y-2 text-sm  leading-116 text-dark-brown-900">
+              <dl className="mt-3.5 space-y-2 text-sm  leading-116 text-dark-brown-900">
                 <div className="flex justify-between">
                   <dt className="text-dark-brown-900 font-normal">Subtotal</dt>
                   <dd className="font-medium">{inr.format(subtotal)}</dd>
@@ -255,14 +255,14 @@ export default function CartDrawer({ checkoutHref = "/checkout" }) {
                   <dd className="font-medium">{shipping === 0 ? "Free" : inr.format(shipping)}</dd>
                 </div>
                 <div className="flex justify-between leading-117 text-18 font-medium">
-                  <dt className="font-medium">Total</dt>
-                  <dd className="font-bold">{inr.format(total)}</dd>
+                  <dt className="font-medium text-dark-warm-charcoal">Total</dt>
+                  <dd className="font-bold text-dark-warm-charcoal">{inr.format(total)}</dd>
                 </div>
               </dl>
 
               <button
                 href={checkoutHref}
-                className="mt-3.5 block rounded-full w-full bg-orange-100 py-4.5 text-center text-sm font-medium cursor-pointer text-white transition hover:brightness-110 group relative overflow-hidden border-0  duration-300 ease-out  hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
+                className="mt-3.5 block rounded-full w-full bg-orange-100 py-4.5 text-center text-base leading-126 font-medium cursor-pointer text-white transition hover:brightness-110 group relative overflow-hidden border-0  duration-300 ease-out  hover:scale-[1.03] hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full "
               >
                 Checkout - {inr.format(total)}
               </button>

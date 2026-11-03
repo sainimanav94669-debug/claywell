@@ -7,16 +7,18 @@ import Button from "../common/Button";
 const Hero = () => {
     return (
         <section className='lg:px-20 sm:px-10 px-4 max-w-360 mx-auto '>
-            <div className='flex max-[992px]:flex-col items-center justify-between my-8 sm:my-10 gap-10 sm:gap-16'>
+            <div className='flex max-[992px]:flex-col items-center justify-between py-8 sm:py-10 gap-10 sm:gap-16'>
                 <div data-aos="fade-right" className='max-w-150'>
                     <Info>HANDCRAFTED CERAMICS</Info>
                     <Heading className='my-6'>Set a table worth gathering around</Heading>
                     <Paragraph>Stoneware, porcelain and glazed ceramics made to be used every day and loved for years. Free shipping on orders above ₹1,999.</Paragraph>
                     <div className='flex   items-center gap-4 my-6'>
-                        <Button className=" group relative max-w-44.25 overflow-hidden border-0 bg-orange-100! text-white transition-all duration-300 ease-out   hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full " >
-                            <span className="relative z-10">Shop Collection</span>
+                        <Button className="group relative   isolate overflow-hidden rounded-full border border-orange-100 bg-orange-100! text-white transition-all duration-300 ease-out hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] hover:text-dark-warm-charcoal hover:border-dark-warm-charcoal active:scale-95 before:absolute before:inset-0 before:-z-10 before:origin-left before:scale-x-0 before:rounded-full before:bg-soft-cream before:transition-transform before:duration-500 before:ease-[cubic-bezier(0.22,1,0.36,1)] hover:before:scale-x-100">
+                            <span className="relative z-10 transition-colors duration-300">
+                                Shop Collection
+                            </span>
                         </Button>
-                        <Button className=" group relative isolate overflow-hidden border border-dark-warm-charcoal  bg-soft-cream! text-dark-warm-charcoal transition-all duration-300 ease-out    hover:shadow-[0_8px_20px_rgba(43,38,34,0.18)]  hover:text-white active:scale-95 before:absolute before:inset-0 before:-z-10 before:origin-left before:scale-x-0 before:rounded-full before:bg-dark-warm-charcoal before:transition-transform before:duration-500 before:ease-[cubic-bezier(0.22,1,0.36,1)] hover:before:scale-x-100">
+                        <Button className=" group relative isolate overflow-hidden border border-dark-warm-charcoal  bg-soft-cream! text-dark-warm-charcoal transition-all duration-300 ease-out    hover:shadow-[0_8px_20px_rgba(43,38,34,0.18)]  hover:text-white active:scale-95 before:absolute before:inset-0 before:-z-10 before:origin-left before:scale-x-0 before:rounded-full before:bg-orange-100 hover:border-orange-100 before:transition-transform before:duration-500 before:ease-[cubic-bezier(0.22,1,0.36,1)] hover:before:scale-x-100">
                             <span className="relative z-10 transition-colors duration-300">  View Offers </span>
                         </Button>
                     </div>

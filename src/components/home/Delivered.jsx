@@ -82,7 +82,7 @@ const FeatureIcon = ({ type }) => {
 
 const Delivered = () => {
   return (
-    <section className="w-full bg-[#F2E8DC] px-4 sm:px-10 lg:px-20">
+    <section className="w-full bg-light-pink px-4 sm:px-10 lg:px-20">
       <div className="mx-auto max-w-7xl py-15 sm:py-20 lg:py-24">
          
         <div className="mb-8 text-center sm:mb-10 lg:mb-14">
@@ -113,7 +113,7 @@ const Delivered = () => {
               </h3>
 
 
-              <p className="max-w-xs text-sm leading-5 text-dark-brown-900 sm:text-sm sm:leading-172">
+              <p className="max-w-xs text-sm leading-5 text-dark-brown-900 sm:text-15 sm:leading-172">
                 {item.description}
               </p>
             </div>
