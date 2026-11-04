@@ -72,12 +72,12 @@ const Customers = () => {
               </div>
 
 
-              <p className="mb-5 grow text-sm leading-5 text-light-gray-300 sm:text-base sm:leading-163 font-normal">
+              <p className="mb-5  text-sm leading-5 text-light-gray-300 sm:text-base sm:leading-163 font-normal">
                 {customer.message}
               </p>
 
 
-              <div className="mt-auto flex items-center gap-3">
+              <div className=" flex items-center gap-3">
                 <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-medium text-white transition-transform duration-300 group-hover:scale-110">
                   {customer.tag}
                 </div>

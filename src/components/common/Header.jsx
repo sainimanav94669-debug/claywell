@@ -141,7 +141,7 @@ const Header = () => {
 
 
         <aside
-          className={`absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col bg-soft-cream shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${menuOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute right-0 top-0 flex h-full w-[85%]  max-w-sm flex-col bg-soft-cream shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${menuOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
 
