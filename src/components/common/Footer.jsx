@@ -15,10 +15,10 @@ import Swal from "sweetalert2";
   {
     title: "Help",
     links: [
-      { label: "Shipping", href: "/" },
-      { label: "Returns", href: "/" },
-      { label: "Care guide", href: "/" },
-      { label: "Contact", href: "/" },
+      { label: "Shipping", href: "/export" },
+      { label: "Returns", href: "/back" },
+      { label: "Care guide", href: "/care" },
+      { label: "Contact", href: "/dialing" },
     ],
   },
 ];
