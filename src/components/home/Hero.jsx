@@ -40,7 +40,7 @@ const Hero = () => {
 
                 </div>
                 <div>
-                    <img data-aos="fade-left" width="616" height="560" src="/images/webp/img-hero.webp" alt="hero-img" className='xl:max-w-154 sm:max-w-auto max-h-75 sm:max-h-full   max-w-auto ' />
+                    <img data-aos="fade-left" width="616" height="560" src="/images/webp/img-hero.webp" alt="hero-img" className='xl:max-w-154 sm:max-w-auto max-h-75  sm:max-h-full   max-w-auto ' />
                 </div>
             </div>
         </section>
