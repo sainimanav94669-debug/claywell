@@ -1,5 +1,7 @@
 import Heading from "../common/Heading";
 import Info from "../common/Info";
+import Button from "../common/Button";
+
 
 export default function PromoBanner() {
   return (
@@ -22,16 +24,16 @@ export default function PromoBanner() {
             till 15 November.
           </p>
 
-          <span className="rounded-[10px] max-w-28 leading-110 border-[1.5px] border-dashed border-orange-100 px-5 py-3.75 text-15 font-bold tracking-[0.2em] text-orange-300">
+          <span className="rounded-[10px] max-w-28 leading-110 border-[1.5px] border-dashed border-orange-100 px-4 sm:px-5 py-3 sm:py-3.75 text-13 sm:text-15 font-bold tracking-[0.2em] text-orange-300">
             CLAY30
           </span>
 
-          <button
+          <Button
             href="/collections/dinner-sets"
-            className="rounded-full cursor-pointer   px-8.25  py-4.5 text-base leading-126 font-medium group relative max-w-44.25 overflow-hidden border-0 bg-orange-100! text-white transition-all duration-300 ease-out     hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full"
+            className="rounded-full cursor-pointer  px-7.25 sm:px-8.25 py-3.5 sm:py-4.5 text-sm sm:text-base leading-126 font-medium group relative max-w-44.25 overflow-hidden border-0 bg-orange-100! text-white transition-all duration-300 ease-out     hover:shadow-[0_8px_25px_rgba(194,96,58,0.35)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/30 before:to-transparent before:skew-x-[-20deg] before:transition-transform before:duration-700 hover:before:translate-x-full"
           >
             Grab the offer
-          </button>
+          </Button>
         </div>
 
         <div className="relative order-first h-52 md:order-0 md:h-auto">

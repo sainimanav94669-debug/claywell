@@ -6,8 +6,8 @@ import Button from "../common/Button";
 
 const Hero = () => {
     return (
-        <section className='lg:px-20 sm:px-10 px-4 max-w-360 mx-auto '>
-            <div className='flex max-[992px]:flex-col items-center justify-between py-8 sm:py-10 gap-10 sm:gap-16'>
+        <section className='lg:px-20 sm:px-10 px-4 py-10 max-w-360 mx-auto '>
+            <div className='flex max-[992px]:flex-col items-center justify-between  gap-10 sm:gap-16'>
                 <div data-aos="fade-right" className='max-w-150'>
                     <Info>HANDCRAFTED CERAMICS</Info>
                     <Heading className='my-6'>Set a table worth gathering around</Heading>

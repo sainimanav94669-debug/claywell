@@ -12,7 +12,7 @@ const Collection = () => {
         <button className='text-15 leading-120 font-medium text-orange-100 cursor-pointer hover:text-dark-warm-charcoal transition-all duration-300'>View all →</button>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid max-[680px]:grid-cols-1 gap-5 sm:gap-6 max-[1026px]:grid-cols-2 grid-cols-4">
         <div>
           <img
             className="h-auto w-full max-h-75 sm:max-h-full rounded-[20px]  object-cover"

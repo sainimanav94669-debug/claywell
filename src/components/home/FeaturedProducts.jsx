@@ -86,7 +86,8 @@ const FeaturedProducts = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="group rounded-[20px] border border-light-cream bg-white pt-4 pl-4 pr-3.5 pb-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="group rounded-[20px
+              ] border border-light-cream bg-white pt-4 pl-4 pr-3.5 pb-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="relative  rounded-[20px]">
                 <img
