@@ -135,7 +135,7 @@ const Header = () => {
           type="button"
           aria-label="Close navigation menu"
           onClick={closeMenu}
-          className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${menuOpen ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 bg-black/40 backdrop-blur-2xl transition-opacity duration-300 ${menuOpen ? "opacity-100" : "opacity-0"
             }`}
         />
 
@@ -158,7 +158,7 @@ const Header = () => {
               type="button"
               onClick={closeMenu}
               aria-label="Close menu"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-dark-warm-charcoal text-white transition-transform duration-300 hover:rotate-90 hover:bg-orange-100"
+              className="flex h-10 w-10 items-center  justify-center rounded-full bg-dark-warm-charcoal text-white transition-transform duration-300 hover:rotate-90 hover:bg-orange-100"
             >
               <X size={20} />
             </button>
